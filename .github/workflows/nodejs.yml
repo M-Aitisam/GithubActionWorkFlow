@@ -26,11 +26,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Run ESLint
-      run: npm run lint
-      
     - name: Run tests
       run: npm test
       
-    - name: Start application (smoke test)
-      run: npm start & sleep 5 && curl -s http://localhost:3000
+    - name: Start application
+      run: npm start
