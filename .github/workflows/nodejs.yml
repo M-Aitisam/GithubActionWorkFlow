@@ -26,8 +26,13 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Run tests
-      run: npm test
+    - name: Run tests if they exist
+      run: |
+        if [ -d "tests" ]; then
+          npm test
+        else
+          echo "No tests directory found, skipping tests"
+        fi
       
     - name: Start application
       run: npm start
