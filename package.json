@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"  },
+    "start": "node app.js",
+    "test": "mocha tests/**/*.test.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
