@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+    <main class="container">
+        <section class="gallery">
+            <% restaurant.images.forEach(image => { %>
+                <div class="gallery-item">
+                    <img src="<%= image %>" alt="Restaurant ambiance">
+                </div>
+            <% }); %>
+        </section>
+
+        <section class="menu">
+            <h2>Signature Dishes</h2>
+            <div class="menu-grid">
+                <% restaurant.menu.forEach(item => { %>
+                    <div class="menu-item">
+                        <h3><%= item.name %></h3>
+                        <p><%= item.price %></p>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+<%- include('partials/footer') %>
